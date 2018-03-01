@@ -1,0 +1,37 @@
+echo "Sourcing maps..."
+let mapleader=" "
+let localmapleader=" "
+
+" Esc to disable highlighting
+nnoremap <silent> <esc> :noh<cr><esc>
+
+" Edit config files
+nnoremap <leader>eb :vsplit $MYVIMRC.bundles<cr>
+nnoremap <leader>ec :vsplit $MYVIMRC.config<cr>
+nnoremap <leader>em :vsplit $MYVIMRC.maps<cr>
+nnoremap <leader>ea :vsplit $MYVIMRC.appearance<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" Source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>:PluginInstall<cr>:q<cr>
+
+" Window navigation & manipulation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-s> :set scb!<cr>
+nnoremap <leader>w <C-w>q
+set splitright
+set splitbelow
+nnoremap <leader>vs :vsplit <cr><C-w>
+nnoremap <leader>hs :split <cr><C-w>
+
+" Open file in new window
+nnoremap <leader>f <C-w><C-f>
+
+" Toggle fold
+nnoremap <leader><space> za
+
+" Python
+"autocmd FileType python nnoremap <leader>ll :w<cr>:Sh python %<cr>
+"autocmd FileType python nnoremap <leader>cc I#<esc>
