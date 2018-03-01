@@ -3,7 +3,7 @@ set number		"Line numbers
 if has('gui_running')
 	colorscheme solarized 	"Use solarized
 else
-	colorscheme default
+	colorscheme solarized
 endif
 set guifont=Inconsolata:h14	"Set font
 set shiftwidth=4	"Tabsize

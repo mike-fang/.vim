@@ -3,7 +3,6 @@ let mapleader=" "
 let localmapleader=" "
 
 " Esc to disable highlighting
-nnoremap <silent> <esc> :noh<cr><esc>
 
 " Edit config files
 nnoremap <leader>eb :vsplit $MYVIMRC.bundles<cr>
@@ -11,6 +10,8 @@ nnoremap <leader>ec :vsplit $MYVIMRC.config<cr>
 nnoremap <leader>em :vsplit $MYVIMRC.maps<cr>
 nnoremap <leader>ea :vsplit $MYVIMRC.appearance<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>et :split TODO<cr>
+nnoremap <leader>ep :split scratch_pad.py<cr>
 " Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>:PluginInstall<cr>:q<cr>
 
@@ -33,5 +34,5 @@ nnoremap <leader>f <C-w><C-f>
 nnoremap <leader><space> za
 
 " Python
-"autocmd FileType python nnoremap <leader>ll :w<cr>:Sh python %<cr>
-"autocmd FileType python nnoremap <leader>cc I#<esc>
+autocmd FileType python nnoremap <leader>ll :w<cr>:Sh python %<cr>
+autocmd FileType python nnoremap <leader>cc I#<esc>
