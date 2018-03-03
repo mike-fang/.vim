@@ -4,16 +4,16 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-    if filereadable(expand("~/.vimrc.bundles"))
-       source ~/.vimrc.bundles
+    if filereadable(expand("$MYVIMRC.bundles"))
+       source $MYVIMRC.bundles
     endif
 call vundle#end()
 
 filetype plugin indent on
 
-source ~/.vimrc.maps
-source ~/.vimrc.appearance
-source ~/.vimrc.config
+source $MYVIMRC.maps
+source $MYVIMRC.appearance
+source $MYVIMRC.config
 
 function! s:ExecuteInShell(command)
   let command = join(map(split(a:command), 'expand(v:val)'))
