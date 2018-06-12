@@ -6,6 +6,6 @@ colorscheme solarized
 "else
 "	colorscheme solarized
 "endif
-"set guifont=Inconsolata:h14	"Set font
+set guifont=Inconsolata:h14	"Set font
 set shiftwidth=4	"Tabsize
 set tabstop=4
