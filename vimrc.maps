@@ -36,3 +36,7 @@ nnoremap <leader><space> za
 " Python
 autocmd FileType python nnoremap <leader>ll :w<cr>:Sh python %<cr>
 autocmd FileType python nnoremap <leader>cc I#<esc>
+
+" Save and restore session
+nnoremap <leader>ss :mksession! ~/temp_vim_session.vim<cr>
+nnoremap <leader>sr :source ~/temp_vim_session.vim<cr>
