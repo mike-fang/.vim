@@ -5,6 +5,8 @@ let localmapleader=" "
 " Esc to disable highlighting
 
 " Edit config files
+
+inoremap jk <esc>
 nnoremap <leader>eb :vsplit $MYVIMRC.bundles<cr>
 nnoremap <leader>ec :vsplit $MYVIMRC.config<cr>
 nnoremap <leader>em :vsplit $MYVIMRC.maps<cr>
