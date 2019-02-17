@@ -6,7 +6,7 @@ let localmapleader=" "
 
 " Edit config files
 
-inoremap jk <esc>
+"inoremap jk <esc>
 nnoremap <leader>eb :vsplit $MYVIMRC.bundles<cr>
 nnoremap <leader>ec :vsplit $MYVIMRC.config<cr>
 nnoremap <leader>em :vsplit $MYVIMRC.maps<cr>
