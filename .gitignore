@@ -1,4 +1,5 @@
 bundle/
+!bundle/vim-colors-solarized/
 
 .DS_Store
 .DS_Store?
