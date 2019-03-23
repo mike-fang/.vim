@@ -1,33 +1,38 @@
-" Vundle
 set nocompatible
-filetype off
+" Python source venv
+"let g:python3_host_prog = expand('$HOME/.vim/neovim3/bin/python')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-    if filereadable(expand("$MYVIMRC.bundles"))
-       source $MYVIMRC.bundles
-    endif
-call vundle#end()
+"filetype off
+call plug#begin('~/.vim/plugged')
+source ~/.vim/bundles.vim
+call plug#end()
+"filetype plugin indent on
 
-filetype plugin indent on
+for f in split(glob('~/.vim/*.vim'))
+    exe 'source' f
+endfor
 
-source $MYVIMRC.maps
-source $MYVIMRC.appearance
-source $MYVIMRC.config
+" Auto change directory
+set autochdir
+set autoread
 
-function! s:ExecuteInShell(command)
-  let command = join(map(split(a:command), 'expand(v:val)'))
-  let winnr = bufwinnr('^' . command . '$')
-  silent! execute  winnr < 0 ? 'botright new ' . fnameescape(command) : winnr . 'wincmd w'
-  setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap number
-  echo 'Execute ' . command . '...'
-  silent! execute 'silent %!'. command
-  silent! execute 'resize ' . line('$')
-  silent! redraw
-  silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
-  silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . command . ''')<CR>'
-  echo 'Shell command ' . command . ' executed.'
-endfunction
-command! -complete=shellcmd -nargs=+ Shell call s:ExecuteInShell(<q-args>)
+" QF opens new
+set switchbuf+=useopen,vsplit
 
-echo "Done!"
+" Use fzf
+set rtp+=/usr/local/opt/fzf
+
+" Interactive subsitute
+if has('nvim')
+	set inccommand=split
+endif
+
+" Stop highlight when entering insert mode
+autocmd InsertEnter * :noh
+
+" Make -> Open quickfix
+autocmd QuickFixCmdPost [^l]* nested bo cwindow
+autocmd QuickFixCmdPost    l* nested bo lwindow
+
+" Term mode
+autocmd TermOpen * startinsert

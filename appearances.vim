@@ -1,11 +1,8 @@
 echo "Sourcing appearence..."
 set number		"Line numbers
+syntax enable
+set background=light
 colorscheme solarized
-"if has('gui_running')
-"	colorscheme solarized 	"Use solarized
-"else
-"	colorscheme solarized
-"endif
 set guifont=Inconsolata:h14	"Set font
 set shiftwidth=4	"Tabsize
 set tabstop=4
