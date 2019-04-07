@@ -2,11 +2,11 @@ set nocompatible
 " Python source venv
 "let g:python3_host_prog = expand('$HOME/.vim/neovim3/bin/python')
 
-"filetype off
+filetype off
 call plug#begin('~/.vim/plugged')
 source ~/.vim/bundles.vim
 call plug#end()
-"filetype plugin indent on
+filetype plugin on
 
 for f in split(glob('~/.vim/*.vim'))
     exe 'source' f
@@ -28,7 +28,7 @@ if has('nvim')
 endif
 
 " Stop highlight when entering insert mode
-autocmd InsertEnter * :noh
+autocmd InsertEnter * noh
 
 " Make -> Open quickfix
 autocmd QuickFixCmdPost [^l]* nested bo cwindow

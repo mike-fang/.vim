@@ -38,10 +38,6 @@ nnoremap <leader>ee :e .<cr>
 nnoremap <leader><space> za
 
 nnoremap <leader>mm :wa<cr> :make<cr>
-" Python
-"autocmd FileType python nnoremap <leader>ll :wa<cr>:! python %<cr>
-autocmd FileType python nnoremap <leader>ll :wa<cr>:! python %<cr>
-autocmd FileType python nnoremap <leader>kk :wa<cr>:bo sp term://python %<cr>
 
 nnoremap <leader>q :bo copen<cr>
 
@@ -54,7 +50,7 @@ nnoremap gp '[V']
 
 " FZF mappings
 noremap <leader>a :exe ':Ag ' . expand('<cword>')<CR><Paste>
-noremap <leader>h :History<cr>
+noremap <leader>hh :History<cr>
 
 " Term mode mapping
 nnoremap <leader>t :vsplit term://bash<cr>
