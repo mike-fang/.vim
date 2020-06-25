@@ -1,3 +1,4 @@
+let echo_source = 0
 set nocompatible
 " Python source venv
 "let g:python3_host_prog = expand('$HOME/.vim/neovim3/bin/python')

@@ -1,7 +1,9 @@
-echo "Sourcing appearence..."
+if echo_source
+    echo "Sourcing appearence..."
+endif
 set number		"Line numbers
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 set guifont=Inconsolata:h14	"Set font
 set shiftwidth=4	"Tabsize

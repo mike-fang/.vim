@@ -1,4 +1,6 @@
-echo "Sourcing maps..."
+if echo_source
+    echo "Sourcing maps..."
+endif
 let mapleader=" "
 let localmapleader=" "
 

@@ -1,4 +1,6 @@
-echo "Sourcing config..."
+if echo_source
+    echo "Sourcing config..."
+endif
 syntax on
 set hls
 set autoindent
@@ -12,6 +14,14 @@ set expandtab
 
 
 autocmd BufEnter,InsertLeave * :syntax sync fromstart
+
+" Set ultisnips triggers
+let g:UltiSnipsExpandTrigger="<tab>"                                            
+let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" python env
+let g:python3_host_prog = '/Users/michael/miniconda3/envs/nvim/bin/python'
 
 " delimitMate
 let delimitMate_expand_space = 1
