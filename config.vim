@@ -21,7 +21,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " python env
-let g:python3_host_prog = '/Users/michael/miniconda3/envs/nvim/bin/python'
+let g:python3_host_prog = expand('$HOME/.vim/env/bin/python')
 
 " delimitMate
 let delimitMate_expand_space = 1

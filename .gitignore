@@ -1,6 +1,7 @@
 bundle/*
 plugged/*
 !bundle/vim-colors-solarized/
+env/
 
 .DS_Store
 .DS_Store?
