@@ -10,6 +10,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 "Plug 'tmhedberg/SimpylFold'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'

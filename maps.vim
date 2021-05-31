@@ -36,6 +36,8 @@ nnoremap <leader>hs :split <cr>
 nnoremap <leader>f <C-w><C-f>
 nnoremap <leader>ee :e .<cr>
 
+" Open file in OSX
+nnoremap <leader>oo :wa<cr>:tabe term://open %<cr>
 " Toggle fold
 nnoremap <leader><space> za
 
@@ -51,7 +53,7 @@ nnoremap <leader>sr :source ~/temp_vim_session.vim<cr>
 nnoremap gp '[V']
 
 " FZF mappings
-noremap <leader>a :exe ':Ag ' . expand('<cword>')<CR><Paste>
+noremap <leader>a :exe ':Ag ' . expand('<cword>')<CR>
 noremap <leader>hh :History<cr>
 
 " Term mode mapping
