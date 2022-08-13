@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/michael/python_projects/mikeroscope'
-let g:netrw_dirhist_2='/Users/michael/.vim'
-let g:netrw_dirhist_3='/Users/michael/python_projects/mikeroscope'
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/michael/python_projects/django_auth/accounts'
+let g:netrw_dirhist_5='/Users/michael/python_projects/django_auth/templates/registration'
+let g:netrw_dirhist_4='/Users/michael/python_projects/django_auth/django_project'
+let g:netrw_dirhist_3='/Users/michael/python_projects/django_auth/django_project/templates/registration'
+let g:netrw_dirhist_2='/Users/michael/python_projects/django_auth/django_project/templates'
+let g:netrw_dirhist_1='/Users/michael/python_projects/django_auth/django_project'
+let g:netrw_dirhist_0='/Users/michael/python_projects/django_auth/django_project/templates'
+let g:netrw_dirhist_9='/Users/michael/python_projects/django_auth/django_project/templates/registration'
+let g:netrw_dirhist_8='/Users/michael/python_projects/django_auth/django_project'
+let g:netrw_dirhist_7='/Users/michael/python_projects/ot2'

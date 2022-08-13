@@ -16,9 +16,9 @@ set expandtab
 autocmd BufEnter,InsertLeave * :syntax sync fromstart
 
 " Set ultisnips triggers
-let g:UltiSnipsExpandTrigger="<tab>"                                            
-let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsExpandTrigger="<c-e>"                                            
+"let g:UltiSnipsJumpForwardTrigger="<c-n>"                                       
+"let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 " python env
 let g:python3_host_prog = expand('$HOME/.vim/env/bin/python')
@@ -59,4 +59,24 @@ let g:deoplete#sources#jedi#ignore_errors = v:true
 " ALE
 let g:ale_linters = ['flake8', 'pylint']
 
+" tabs
+function! HandleTab() abort
+  " First, try to expand or jump on UltiSnips.
+  call UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res > 0
+    return ""
+  endif
+  " Then, check if we're in a completion menu
+  if pumvisible()
+    return "\<C-n>"
+  endif
+  " Then check if we're indenting.
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] =~ '\s'
+    return "\<Tab>"
+  endif
+  " Finally, trigger deoplete completion.
+  return deoplete#manual_complete()
+endfunction
 
+inoremap <silent> <Tab> <C-R>=HandleTab()<CR>
